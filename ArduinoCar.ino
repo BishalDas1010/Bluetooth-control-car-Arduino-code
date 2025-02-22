@@ -9,7 +9,7 @@
 #define START 'A'
 #define PAUSE 'P'
 
-// Johnson drive
+// Johnson driver 
 #define RPWM 9  // Right PWM pin
 #define LPWM 10 // Left PWM pin
 #define REN 8   // Right Enable pin
@@ -74,7 +74,7 @@ void executeCommand(char command) {
       break;
 
     case LEFT:
-      // Perform action for turning left
+      
       analogWrite(RPWM, 200); // Speed control (0-255)
       analogWrite(LPWM, 0);   // Left PWM LOW
       analogWrite(RPWM2, 0); // Stop right motor
